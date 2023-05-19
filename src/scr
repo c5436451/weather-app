@@ -1,0 +1,13 @@
+pipeline {
+  agent any 
+  tools {
+    nodejs '18.14.0'
+  }
+  stages {
+    stage('Example') {
+      steps {
+        sh 'npm version'
+      }
+    }
+  }
+}
